@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 20 50; /* Brighter mystical blue-gray (#1E1E32) */
+    --foreground: 240 240 255; /* Soft enchanted glow (#F0F0FF) */
+    --muted: 100 100 130; /* Aged stone gray-blue (#646482) */
+    --accent: 80 220 255; /* Vibrant Sheikah neon blue (#50DCFF) */
+    --glow: 120 255 220; /* Magical cyan-green glow (#78FFDC) */
+    /* Hex values:
+      - Background: #1E1E32 (Brighter cave walls)
+      - Foreground: #F0F0FF (Readable glowing text)
+      - Muted: #646482 (Ancient stone details)
+      - Accent: #50DCFF (Sheikah neon blue details)
+      - Glow: #78FFDC (Magical highlights)
+    */
+  }
+}
+
+
+
+
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+
+  .custom-bg {
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
