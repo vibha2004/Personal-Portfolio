@@ -124,8 +124,8 @@ const AboutDetails = () => {
             {/* Header Section */}
             <ItemLayout className={"col-span-full lg:col-span-8 row-span-2 flex-col items-start"}>
               <header>
-                <h1 className="text-4xl md:text-5xl font-bold">Jeff Delaney</h1>
-                <p className="text-xl md:text-2xl mt-2">🚀 Welcome to my website!</p>
+                <h1 className="text-4xl md:text-5xl font-bold">This is,Vibha Rao</h1>
+                <p className="text-xl md:text-2xl mt-2">Welcome to my website!</p>
               </header>
             </ItemLayout>
 

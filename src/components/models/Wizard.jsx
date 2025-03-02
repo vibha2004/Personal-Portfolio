@@ -19,7 +19,7 @@ const Wizard = React.memo(function Wizard(props) {
       ref={modelRef}
       {...props}
       
-      scale={[-0.19, 0.19, -0.19]} // Flip vertically by inverting Y scale
+      scale={[0.19, -0.19, -0.19]} // Flip vertically by inverting Y scale
       // Modify the position here to reposition the model
       position={[0, -1, 0]} // Example: Repositioning it to the right on the x-axis
       rotation={[Math.PI / 2, 0, 19]} // Adjusted rotation to stand up
