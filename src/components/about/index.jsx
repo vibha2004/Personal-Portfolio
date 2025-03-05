@@ -113,115 +113,172 @@ const AboutDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="font-sans text-white min-h-screen overflow-hidden">
       {/* Three.js Canvas */}
       <canvas id="bg" style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}></canvas>
 
       {/* Content */}
-      <main style={{ position: 'relative', zIndex: 1 }}>
-        <section className="py-20 w-full">
-          <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full">
-            {/* Header Section */}
-            <ItemLayout className={"col-span-full lg:col-span-8 row-span-2 flex-col items-start"}>
-              <header>
-                <h1 className="text-4xl md:text-5xl font-bold">This is,Vibha Rao</h1>
-                <p className="text-xl md:text-2xl mt-2">Welcome to my website!</p>
-              </header>
-            </ItemLayout>
+      <main className="relative z-10 px-6 sm:px-12 lg:px-24 py-20">
+        <section className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="mb-20 animate-fade-in">
+            <header className="space-y-4">
+              <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600 animate-text-gradient">
+                Vibha Rao
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 animate-slide-in-left">
+                BTech in Computer Science Engineering, 2026
+              </p>
+              <p className="text-lg md:text-xl text-gray-400 max-w-2xl animate-slide-in-right">
+                A curious and driven individual, passionate about innovation and technology. 
+              </p>
+            </header>
+          </div>
 
-            {/* Manifesto Section */}
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">📜 Manifesto</h2>
-                <p className="text-lg md:text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
+          {/* About Me Section */}
+          <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up mb-12 border-2 border-blue-400">
+            <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+              <span className="mr-3">🛡️</span> About Me
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <img
+                src="/background/me.jpg" // Replace with your photo or avatar
+                alt="Vibha Rao"
+                className="w-32 h-32 rounded-full border-4 border-blue-400"
+              />
+              <p className="text-lg text-gray-300 flex-1">
+              I am a passionate full-stack developer with a deep love for creating IoT-based projects and app development. My expertise spans both front-end and back-end technologies, allowing me to build seamless and efficient applications that integrate hardware and software. I also have a keen interest in machine learning, exploring ways to enhance automation and intelligence in my projects.But I’m not just about code—I’m also a trained Bharatanatyam dancer and Carnatic vocalist, where precision and rhythm shape my creativity just as much as tech does. And when I’m not busy building or performing, you’ll probably find me deep into a video game, strategizing my next move. I live for the challenge, whether it's in a high-stakes boss fight or solving real-world tech problems. 
+ 
+              </p>
+            </div>
+          </div>
 
-            {/* Projects and Accomplishments Section */}
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="light">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">👩🏽‍🚀 Projects</h2>
-                <p className="text-lg md:text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
+          {/* Grid Layout for Sections */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Education Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">📚</span> Education
+              </h2>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-300">Vellore Institute of Technology Chennai (2022 - Present) | Btech | CGPA: 9.23</p>
+                <p className="text-lg text-gray-300">St Gregorios High School (2022) |Class 12| Percentage:97.75%</p>
+                <p className="text-lg text-gray-300">St Gregorios High SChool (2020) |Class 10| Percentage:98.3%</p>
+              </div>
+            </div>
 
-            {/* Work History Section */}
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            {/* Work Experience Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-100 border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">💼</span> Work Experience
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-300">Software Developer Intern - Capital Quant</h3>
+                  <p className="text-lg text-gray-300 mt-2">Developed components for the FinStinct product and a CRUD application for financial data.</p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-300">Outreach Lead - SEDS Antariksh, VIT Chennai</h3>
+                  <p className="text-lg text-gray-300 mt-2">Headed outreach initiatives, organized events for schools and NGOs.</p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-300">Operations Member - Enactus VIT Chennai</h3>
+                  <p className="text-lg text-gray-300 mt-2">Led projects empowering underprivileged women with sustainable business models.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Skills Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-200 border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">🛠</span> Skills
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {["C++", "Python", "MySQL", "Django", "JavaScript", "Machine Learning", "Android Studio"].map((skill, index) => (
+                  <div
+                    key={index}
+                    className="p-4 bg-gray-700/20 rounded-lg text-center hover:bg-gray-700/40 transition-colors duration-200 border border-blue-400"
+                  >
+                    <p className="text-lg text-gray-300">{skill}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Projects Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-300 border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">📂</span> Projects
+              </h2>
+              <ul className="space-y-4">
+                {[
+                  { name: "Dynamic Food Labels App with Allergen Detection", link: "https://github.com/vibha2004/Dynamic-Food-Labels-App-with-Allergen-Detection.git" },
+                  { name: "Smart Anti-Sleep Glasses for Driver Alertness Monitoring", link: "https://github.com/vibha2004/Smart-Anti-Sleep-Glasses-for-Driver-Alertness-Monitoring.git"},
+                  { name: "Water Level Management System", link: "https://github.com/vibha2004/Smart-IoT-Based-Water-Level-Management-System-with-Real-Time-Notifications-via-BlynkIOT-App-.git" },
+                  { name: "Inventory Management System", link: "https://github.com/vibha2004/Cloud-Based-Inventory-Management-System-with-AWS-Integration.git" },
+                  { name: "AllerGlam", link: "https://github.com/vibha2004/Mobile-Scanner-App-for-Real-Time-Detection-of-Cosmetic-Allergens-.git" },
+                  { name: "University E Commerce portal", link: "https://github.com/vibha2004/University-E-Commerce-Portal-Development-Using-Django-for-Campus-Retail-.git" },
+                ].map((project, index) => (
+                  <li key={index} className="text-lg text-gray-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-400 transition-colors duration-200"
+                    >
+                      {project.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Certifications Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-400 border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">📜</span> Certifications
+              </h2>
+              <ul className="list-disc ml-5 space-y-3">
+                <li className="text-lg text-gray-300">Microsoft Certified: Azure AI Fundamentals (2024)</li>
+                <li className="text-lg text-gray-300">Microsoft Certified: Azure Data Fundamentals (2024)</li>
+                <li className="text-lg text-gray-300">Cisco Networking Academy: Introduction to Cybersecurity</li>
+                <li className="text-lg text-gray-300">NPTEL Certification: Wildlife Ecology</li>
+              </ul>
+            </div>
+
+            {/* Links Section */}
+            <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-500 border-2 border-blue-400">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+                <span className="mr-3">🔗</span> Links
+              </h2>
+              <div className="space-y-3">
+                <p>
+                  <a href="mailto:vibha.rao2022@vitstudent.ac.in" className="text-lg text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                    Email
+                  </a>
                 </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p>
+                  <a href="https://www.linkedin.com/in/vibha-rao-b29719273/" className="text-lg text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                    LinkedIn
+                  </a>
                 </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p>
+                  <a href="https://github.com/vibha2004" className="text-lg text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                    GitHub
+                  </a>
                 </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
-            <ItemLayout className={"col-span-full lg:col-span-8"}>
-              <section className="left">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">🌮 Work History</h2>
-                <h3 className="text-2xl md:text-3xl font-semibold mt-6">McDonalds</h3>
-                <p className="text-lg md:text-xl mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </section>
-            </ItemLayout>
+              </div>
+            </div>
+          </div>
+
+          {/* Theme of the Portfolio Section */}
+          <div className="bg-gray-800/20 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up mt-12 border-2 border-blue-400">
+            <h2 className="text-3xl font-bold mb-6 text-blue-400 flex items-center">
+              <span className="mr-3">🎨</span> Theme of This Portfolio
+            </h2>
+            <p className="text-lg text-gray-300">
+            This portfolio is inspired by the Sheikah Shrines from The Legend of Zelda: Breath of the Wild, blending futuristic aesthetics with interactive design. The glowing fireflies, dynamic 3D elements powered by Three.js, and immersive background bring a sense of mystery and exploration. The Three.js background on this page is designed to simulate the feeling of the shrine challenges in the game—where problem-solving, creativity, and technology come together. Just like the shrines symbolize wisdom and innovation, this space reflects a passion for building and discovery. 
+            </p>
           </div>
         </section>
       </main>
