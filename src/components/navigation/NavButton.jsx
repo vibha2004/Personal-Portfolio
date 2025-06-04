@@ -6,6 +6,7 @@ import {
   Palette,
   Phone,
   User,
+  Twitter
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";

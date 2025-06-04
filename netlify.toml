@@ -1,0 +1,33 @@
+[build]
+  base = ""
+  publish = ".next"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+[headers]
+  for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+      Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+      Content-Security-Policy = "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; object-src 'none'; media-src 'self' https:; frame-src 'self' https:; child-src 'self' https:; form-action 'self' https:; base-uri 'self'; manifest-src 'self' https:; worker-src 'self' https:;"
+
+[functions]
+  node_bundler = "esbuild"
+
+[build.environment]
+  NEXT_PUBLIC_VERCEL_URL = "https://vibha2004-personal-portfolio.windsurf.build"
+  NEXT_PUBLIC_VERCEL_ENV = "production"
