@@ -73,12 +73,12 @@ const NavButton = ({
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
+              <span className="relative  w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent transition-transform duration-300 hover:scale-110">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
 
-                <span className="absolute px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 bg-background text-foreground text-sm rounded-md shadow-lg whitespace-nowrap group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+                <span className="absolute px-3 py-2 left-full mx-2.5 top-1/2 -translate-y-1/2 bg-background/90 text-foreground text-sm rounded-lg shadow-md whitespace-nowrap group-hover:opacity-100 opacity-0 transition-all duration-300">
                   {label}
                 </span>
               </span>

@@ -25,10 +25,9 @@ const Navigation = ({ onRotate }) => {
 
   return (
     <div className="w-full fixed h-screen flex items-center justify-center">
-      {/* Full welcome message in top left corner */}
-     
-        <div className="absolute top-8 left-8 z-50 max-w-2xl">
-
+      {/* Glowing welcome text in top left corner */}
+      <div className="absolute top-8 left-8 z-50 max-w-2xl">
+  {/* Translucent cyan main title */}
   <h1 className="text-5xl md:text-7xl font-bold font-rajdhani text-cyan-400/70 tracking-tight leading-tight uppercase
                 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]
                 transition-all duration-300">
@@ -39,13 +38,11 @@ const Navigation = ({ onRotate }) => {
   <h2 className="text-1xl md:text-2xl font-medium font-rajdhani text-white mt-4 tracking-wider uppercase
                 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)_0_0_16px_rgba(255,255,255,0.4)]
                 hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)_0_0_24px_rgba(255,255,255,0.6)]
-                transition-all duration-500
+                transition-all duration-200
                 animate-[pulse_3s_ease-in-out_infinite]">
     WHERE TECHNOLOGY MEETS GAMING
   </h2>
-
-
-      </div>
+</div>
 
       <ResponsiveComponent>
         {({ size }) => {
