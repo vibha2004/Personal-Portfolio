@@ -7,6 +7,7 @@ const AboutDetails = () => {
   
   // Titles to rotate through
   const titles = [
+<<<<<<< HEAD
     "App Developer",
     "Web Developer",
     "Machine Learning Enthusiast",
@@ -17,6 +18,18 @@ const AboutDetails = () => {
     "Bharatanatyam Dancer",
     "Carnatic Vocalist",
     "Gamer"
+=======
+    "an App Developer",
+    "a Web Developer",
+    "a Machine Learning Enthusiast",
+    "a Cloud Engineer",
+    "an IoT Creator",
+    "a Full-Stack Wizard",
+    "a Tech Explorer",
+    "a Bharatanatyam Dancer",
+    "a Carnatic Vocalist",
+    "a Gamer"
+>>>>>>> 7c8699fc16e0d5046518d26904f05914f4d80435
   ];
 
   useEffect(() => {
@@ -144,7 +157,11 @@ const AboutDetails = () => {
         {/* Hero Section with Dynamic Title */}
         <section className="max-w-6xl mx-auto mb-20 text-center">
           <div className="animate-fade-in">
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-text-gradient mb-4">
+=======
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text white-500 animate-text-gradient mb-4">
+>>>>>>> 7c8699fc16e0d5046518d26904f05914f4d80435
               Vibha Rao
             </h1>
             <div className="inline-block px-6 py-3 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/50 mb-6">
