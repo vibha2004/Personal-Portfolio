@@ -1,4 +1,5 @@
 "use client";
+
 import { BtnList } from "@/app/data";
 import React, { useState } from "react";
 import NavButton from "./NavButton";
@@ -6,7 +7,7 @@ import useScreenSize from "../hooks/useScreenSize";
 import ResponsiveComponent from "../ResponsiveComponent";
 import { motion } from "framer-motion";
 
- const container = {
+const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -75,18 +76,21 @@ const Navigation = ({ onRotate }) => {
               </motion.div>
             );
           } else {
-            // 📱 Simple bottom layout for mobile screens
+            // 📱 Scrollable bottom layout for mobile screens
             return (
-              <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-md p-2 flex justify-around z-50 border-t border-muted">
-                {BtnList.map((btn) => (
-                  <NavButton
-                    key={btn.label}
-                    {...btn}
-                    x={0}
-                    y={0}
-                    labelDirection="top"
-                  />
-                ))}
+              <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-md border-t border-muted z-50">
+                <div className="flex overflow-x-auto no-scrollbar px-2 py-3 gap-3 justify-start items-center flex-nowrap min-w-full">
+                  {BtnList.map((btn) => (
+                    <div key={btn.label} className="flex-shrink-0">
+                      <NavButton
+                        {...btn}
+                        x={0}
+                        y={0}
+                        labelDirection="top"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           }
