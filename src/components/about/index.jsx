@@ -273,7 +273,7 @@ const AboutDetails = () => {
                 {[
                   { 
                     name: "SmartFoods OCR Food Analyzer", 
-                    link: "https://github.com/vibha2004/Dynamic-Food-Labels-App-with-Allergen-Detection.git",
+                    link:  "https://github.com/vibha2004/Dynamic-Food-Labels-App-with-Allergen-Detection.git",
                     fullName: "Dynamic Food Labels App with Allergen Detection",
                     tech: "Android Studio · OCR · TTS"
                   },
