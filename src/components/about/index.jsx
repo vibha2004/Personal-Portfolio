@@ -256,7 +256,7 @@ const AboutDetails = () => {
                   className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-blue-400/50 object-cover shadow-lg"
                 />
                 <p className="text-sm sm:text-base text-gray-300 flex-1">
-                  I am a passionate full-stack developer with a deep love for creating IoT-based projects and app development. My expertise spans both front-end and back-end technologies, allowing me to build seamless and efficient applications that integrate hardware and software. I also have a keen interest in machine learning, exploring ways to enhance automation and intelligence in my projects.But I&apos;m not just about code—I&apos;m also a trained Bharatanatyam dancer and Carnatic vocalist, where precision and rhythm shape my creativity just as much as tech does. And when I&apos;m not busy building or performing, you&apos;ll probably find me deep into a video game, strategizing my next move. I live for the challenge, whether it&apos;s in a high-stakes boss fight or solving real-world tech problems. 
+                  I am a passionate full-stack developer with a deep love for creating IoT-based projects and app development. My expertise spans both front-end and back-end technologies, allowing me to build seamless and efficient applications that integrate hardware and software. I also have a keen interest in machine learning, exploring ways to enhance automation and intelligence in my projects. But I'm not just about code—I'm also a trained Bharatanatyam dancer and Carnatic vocalist, where precision and rhythm shape my creativity just as much as tech does. And when I'm not busy building or performing, you'll probably find me deep into a video game, strategizing my next move. I live for the challenge, whether it's in a high-stakes boss fight or solving real-world tech problems. 
                 </p>
               </div>
             </div>
@@ -272,34 +272,40 @@ const AboutDetails = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {[
                   { 
-                    name: "Dynamic Food Labels App", 
+                    name: "SmartFoods OCR Food Analyzer", 
                     link: "https://github.com/vibha2004/Dynamic-Food-Labels-App-with-Allergen-Detection.git",
-                    fullName: "Dynamic Food Labels App with Allergen Detection" 
+                    fullName: "Dynamic Food Labels App with Allergen Detection",
+                    tech: "Android Studio · OCR · TTS"
+                  },
+                  { 
+                    name: "AWS Inventory Management", 
+                    link: "https://github.com/vibha2004/Cloud-Based-Inventory-Management-System-with-AWS-Integration.git",
+                    fullName: "AWS Inventory Management System",
+                    tech: "AWS · Cloud Computing"
                   },
                   { 
                     name: "Anti-Sleep Glasses", 
                     link: "https://github.com/vibha2004/Smart-Anti-Sleep-Glasses-for-Driver-Alertness-Monitoring.git",
-                    fullName: "Smart Anti-Sleep Glasses for Driver Alertness Monitoring" 
+                    fullName: "Smart Anti-Sleep Glasses",
+                    tech: "Wearable Tech · Sensors"
+                  },
+                  { 
+                    name: "Energy Consumption Prediction", 
+                    link: "https://github.com/vibha2004/Residential-Energy-Consumption-Forecasting-Using-Gradient-Descent-",
+                    fullName: "Energy Consumption Prediction Model",
+                    tech: "Python · TensorFlow"
                   },
                   { 
                     name: "Water Level System", 
                     link: "https://github.com/vibha2004/Smart-IoT-Based-Water-Level-Management-System-with-Real-Time-Notifications-via-BlynkIOT-App-.git",
-                    fullName: "Water Level Management System" 
-                  },
-                  { 
-                    name: "Inventory System", 
-                    link: "https://github.com/vibha2004/Cloud-Based-Inventory-Management-System-with-AWS-Integration.git",
-                    fullName: "Inventory Management System" 
-                  },
-                  { 
-                    name: "AllerGlam", 
-                    link: "https://github.com/vibha2004/Mobile-Scanner-App-for-Real-Time-Detection-of-Cosmetic-Allergens-.git",
-                    fullName: "AllerGlam Cosmetic Allergen Detection" 
+                    fullName: "Water Level Management System",
+                    tech: "IoT · Blynk"
                   },
                   { 
                     name: "University E-Commerce", 
-                    link: "https://github.com/vibha2004/University-E-Commerce-Portal-Development-Using-Django-for-Campus-Retail-.git",
-                    fullName: "University E-Commerce Portal" 
+                    link: "https://github.com/vibha2004/University-E-Commerce-Portal-Development-Using-Django-for-Campus-Retail",
+                    fullName: "University E-Commerce Portal",
+                    tech: "Django · AWS"
                   },
                 ].map((project, index) => {
                   const initials = project.fullName
@@ -334,6 +340,9 @@ const AboutDetails = () => {
                         <h3 className="text-base sm:text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
                           {project.name}
                         </h3>
+                        <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                          {project.tech}
+                        </p>
                         <div className="flex items-center mt-1 sm:mt-2 text-xs sm:text-sm text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity">
                           View on GitHub
                           <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -366,31 +375,14 @@ const AboutDetails = () => {
                 </div>
                 <div className="timeline-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">St Gregorios High School</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Class 12 | 2022</p>
+                  <p className="text-sm sm:text-base text-gray-400">ISC Grade 12 | 2022</p>
                   <p className="text-sm sm:text-base text-blue-300">97.75%</p>
                 </div>
                 <div className="timeline-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">St Gregorios High School</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Class 10 | 2020</p>
+                  <p className="text-sm sm:text-base text-gray-400">ICSE Grade 10 | 2020</p>
                   <p className="text-sm sm:text-base text-blue-300">98.3%</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Skills */}
-            <div className="glass-card">
-              <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 sm:mr-4">
-                  <span className="text-xl sm:text-2xl">🛠️</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">Skills</h2>
-              </div>
-              <div className="flex flex-wrap gap-2 sm:gap-3">
-                {["C++", "Python", "MySQL", "Django", "JavaScript", "ML", "Android Studio", "IoT", "Azure", "Three.js"].map((skill, index) => (
-                  <span key={index} className="skill-tag text-xs sm:text-sm">
-                    {skill}
-                  </span>
-                ))}
               </div>
             </div>
 
@@ -404,19 +396,92 @@ const AboutDetails = () => {
               </div>
               <div className="space-y-4 sm:space-y-6">
                 <div className="experience-item">
-                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">Capital Quant</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Software Developer Intern</p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1 sm:mt-2">Developed financial data applications</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">Quest1 - NLP Intern</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mt-1">
+                    Researched multilingual NLP systems using LLaMA, Mistral, and Sarvam across 10 Indian languages, achieving 30% latency reduction and 25% accuracy gain
+                  </p>
                 </div>
                 <div className="experience-item">
-                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">SEDS Antariksh</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Outreach Lead</p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1 sm:mt-2">Organized STEM events</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">Capital Quant - SDE Intern</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mt-1">
+                    Developed key JSON processing and CRUD modules for Finstinct's core product, enhancing document workflow efficiency
+                  </p>
                 </div>
                 <div className="experience-item">
-                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">Enactus</h3>
-                  <p className="text-sm sm:text-base text-gray-400">Operations Member</p>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-1 sm:mt-2">Empowered women entrepreneurs</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-blue-300">SEDS Antariksh - Outreach Head</h3>
+                  <p className="text-sm sm:text-base text-gray-300 mt-1">
+                    Led astronomy outreach programs impacting 200+ students and managed hackathons with 200+ participants
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Skills */}
+            <div className="glass-card">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 sm:mr-4">
+                  <span className="text-xl sm:text-2xl">🛠️</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">Skills</h2>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-sm font-semibold text-blue-300 mb-2">Languages/Frameworks</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {["C", "C++", "Python", "Java", "Django", "React Native", "Streamlit", "Pandas", "scikit-learn"].map((skill, index) => (
+                      <span key={index} className="skill-tag text-xs sm:text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-blue-300 mb-2">Cloud/Tools/Databases</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {["AWS", "Azure", "MariaDB", "GitHub", "Android Studio", "Arduino", "Gradle", "Figma"].map((skill, index) => (
+                      <span key={index} className="skill-tag text-xs sm:text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-blue-300 mb-2">Coursework</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {["DSA", "OS", "Computer Networks", "DBMS", "OOPs", "Web Dev", "ML", "IoT"].map((skill, index) => (
+                      <span key={index} className="skill-tag text-xs sm:text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div className="glass-card">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 sm:mr-4">
+                  <span className="text-xl sm:text-2xl">🏆</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">Certifications</h2>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <p className="text-sm sm:text-base text-gray-300">Microsoft Certified: Azure AI Fundamentals (2024)</p>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <p className="text-sm sm:text-base text-gray-300">Microsoft Certified: Azure Data Fundamentals (2024)</p>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <p className="text-sm sm:text-base text-gray-300">Cisco: Introduction to Cybersecurity (2023)</p>
+                </div>
+                <div className="flex items-start">
+                  <span className="text-blue-400 mr-2">•</span>
+                  <p className="text-sm sm:text-base text-gray-300">Cisco: Introduction to Packet Tracer (2023)</p>
                 </div>
               </div>
             </div>
@@ -425,8 +490,24 @@ const AboutDetails = () => {
 
         {/* Bottom Full-width Section */}
         <div className="max-w-7xl mx-auto mt-8 sm:mt-12">
-          {/* Portfolio Theme */}
+          {/* Awards */}
           <div className="glass-card">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 sm:mr-4">
+                <span className="text-xl sm:text-2xl">🌟</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">Awards</h2>
+            </div>
+            <div className="flex items-start">
+              <span className="text-blue-400 mr-2">•</span>
+              <p className="text-sm sm:text-base text-gray-300">
+                INSPIRE (SHE) Scholarship eligibility letter offered by Dept. of Science and Technology, Govt. of India (2023)
+              </p>
+            </div>
+          </div>
+
+          {/* Portfolio Theme */}
+          <div className="glass-card mt-6 sm:mt-8">
             <div className="flex items-center mb-4 sm:mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 sm:mr-4">
                 <span className="text-xl sm:text-2xl">✨</span>
@@ -449,6 +530,9 @@ const AboutDetails = () => {
               </a>
               <a href="https://github.com/vibha2004" className="contact-link text-sm sm:text-base">
                 <span className="text-xl sm:text-2xl mr-2">💻</span> GitHub
+              </a>
+              <a href="tel:9004745416" className="contact-link text-sm sm:text-base">
+                <span className="text-xl sm:text-2xl mr-2">📞</span> Call
               </a>
             </div>
           </div>
