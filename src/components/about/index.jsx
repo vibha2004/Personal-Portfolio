@@ -292,7 +292,7 @@ const AboutDetails = () => {
                   { 
                     name: "Energy Consumption Prediction", 
                     link: "https://github.com/vibha2004/Residential-Energy-Consumption-Forecasting-Using-Gradient-Descent-",
-                    fullName: "Energy Consumption Prediction Model",
+                    fullName: " Energy Consumption Prediction Model",
                     tech: "Python · TensorFlow"
                   },
                   { 
