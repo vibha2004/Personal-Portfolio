@@ -371,7 +371,7 @@ const AboutDetails = () => {
                 <div className="timeline-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">VIT Chennai</h3>
                   <p className="text-sm sm:text-base text-gray-400">BTech in CSE | 2022-2026</p>
-                  <p className="text-sm sm:text-base text-blue-300">CGPA: 9.23</p>
+                  <p className="text-sm sm:text-base text-blue-300">CGPA: 9.30</p>
                 </div>
                 <div className="timeline-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">St Gregorios High School</h3>
